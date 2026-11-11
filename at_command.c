@@ -155,7 +155,7 @@ EXPORT_DEF int at_enqueue_initialization(struct cpvt *cpvt, at_cmd_t from_comman
 		/* Get SMS Service center address */
 		ATQ_CMD_DECLARE_ST(CMD_AT_CSCA, "AT+CSCA?\r"),
 		/* activate Supplementary Service Notification with CSSI and CSSU */
-		ATQ_CMD_DECLARE_ST(CMD_AT_CSSN, "AT+CSSN=1,1\r"),
+		ATQ_CMD_DECLARE_ST(CMD_AT_CSSN, "AT+CSSN=0,0\r"), /* E303: +CSSI desyncs the parser and ^CONN is lost */
 		/* Set Message Format */
 		ATQ_CMD_DECLARE_ST(CMD_AT_CMGF, "AT+CMGF=0\r"),
 
